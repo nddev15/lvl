@@ -44,11 +44,11 @@ lavalink:
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
       repository: "https://maven.lavalink.dev/releases"
-    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.2.2"
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.4.0"
       repository: "https://maven.lavalink.dev/releases"
 
   server:
-    password: "${LAVALINK_PASSWORD:youshallnotpass}"  # ← set ở Render Environment
+    password: "${LAVALINK_PASSWORD:tuiducios}"  # ← set ở Render Environment
     sources:
       youtube: false              # tắt built-in, dùng youtube-plugin thay thế
       bandcamp: true
