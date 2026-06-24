@@ -1,0 +1,132 @@
+2026-06-24T19:41:37.006+07:00  INFO 24020 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.2.2 using Java 17.0.19 with PID 24020 (C:\Users\ASUS VivoBook\Downloads\AI\lavalink\Lavalink.jar started by ASUS VivoBook in C:\Users\ASUS VivoBook\Downloads\AI\lavalink)
+2026-06-24T19:41:37.012+07:00  INFO 24020 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T19:41:38.120+07:00  INFO 24020 --- [Lavalink] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3d6bf653-92ea-3fde-943a-10b9f8cd696e
+2026-06-24T19:41:38.565+07:00  INFO 24020 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Downloading https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/1.13.1/youtube-plugin-1.13.1.jar
+2026-06-24T19:42:34.296+07:00  INFO 26132 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.2.2 using Java 17.0.19 with PID 26132 (C:\Users\ASUS VivoBook\Downloads\AI\lavalink\Lavalink.jar started by ASUS VivoBook in C:\Users\ASUS VivoBook\Downloads\AI\lavalink)
+2026-06-24T19:42:34.301+07:00  INFO 26132 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T19:43:46.263+07:00  INFO 2668 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.2.2 using Java 17.0.19 with PID 2668 (C:\Users\ASUS VivoBook\Downloads\AI\lavalink\Lavalink.jar started by ASUS VivoBook in C:\Users\ASUS VivoBook\Downloads\AI\lavalink)
+2026-06-24T19:43:46.271+07:00  INFO 2668 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T19:43:48.944+07:00  INFO 2668 --- [Lavalink] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3d6bf653-92ea-3fde-943a-10b9f8cd696e
+2026-06-24T19:43:50.309+07:00  WARN 2668 --- [Lavalink] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+2026-06-24T19:43:50.329+07:00  INFO 2668 --- [Lavalink] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-24T19:43:50.396+07:00 ERROR 2668 --- [Lavalink] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at lavalink.server.Launcher.launchPluginBootstrap(Launcher.kt:132) ~[classes!/:4.2.2]
+	at lavalink.server.Launcher.main(Launcher.kt:125) ~[classes!/:4.2.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:4.2.2]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95) ~[Lavalink.jar:4.2.2]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:4.2.2]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[Lavalink.jar:4.2.2]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	... 25 common frames omitted
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1637) ~[na:na]
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1645) ~[na:na]
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1483) ~[na:na]
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1445) ~[na:na]
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:717) ~[na:na]
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251) ~[na:na]
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180) ~[na:na]
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:346) ~[na:na]
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:317) ~[na:na]
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:283) ~[na:na]
+	at lavalink.server.bootstrap.PluginManager.manageDownloads(PluginManager.kt:46) ~[classes!/:4.2.2]
+	at lavalink.server.bootstrap.PluginManager.<init>(PluginManager.kt:30) ~[classes!/:4.2.2]
+	at lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0.<init>(<generated>) ~[classes!/:4.2.2]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	... 27 common frames omitted
+
+2026-06-24T19:45:32.540+07:00  INFO 27056 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.2.2 using Java 17.0.19 with PID 27056 (C:\Users\ASUS VivoBook\Downloads\AI\lavalink\Lavalink.jar started by ASUS VivoBook in C:\Users\ASUS VivoBook\Downloads\AI\lavalink)
+2026-06-24T19:45:32.549+07:00  INFO 27056 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T19:45:33.208+07:00  INFO 27056 --- [Lavalink] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3d6bf653-92ea-3fde-943a-10b9f8cd696e
+2026-06-24T19:45:33.606+07:00  WARN 27056 --- [Lavalink] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+2026-06-24T19:45:33.614+07:00  INFO 27056 --- [Lavalink] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-24T19:45:33.640+07:00 ERROR 27056 --- [Lavalink] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at lavalink.server.Launcher.launchPluginBootstrap(Launcher.kt:132) ~[classes!/:4.2.2]
+	at lavalink.server.Launcher.main(Launcher.kt:125) ~[classes!/:4.2.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:4.2.2]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95) ~[Lavalink.jar:4.2.2]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:4.2.2]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[Lavalink.jar:4.2.2]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	... 25 common frames omitted
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1637) ~[na:na]
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1645) ~[na:na]
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1483) ~[na:na]
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1445) ~[na:na]
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:717) ~[na:na]
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251) ~[na:na]
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180) ~[na:na]
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:346) ~[na:na]
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:317) ~[na:na]
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:283) ~[na:na]
+	at lavalink.server.bootstrap.PluginManager.manageDownloads(PluginManager.kt:46) ~[classes!/:4.2.2]
+	at lavalink.server.bootstrap.PluginManager.<init>(PluginManager.kt:30) ~[classes!/:4.2.2]
+	at lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0.<init>(<generated>) ~[classes!/:4.2.2]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.15.jar!/:6.1.15]
+	... 27 common frames omitted
+
