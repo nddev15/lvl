@@ -42,9 +42,9 @@ plugins:
 lavalink:
   # ── Plugins tự động tải khi khởi động ────────────────────────────────────────
   plugins:
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.13.1"
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
       repository: "https://maven.lavalink.dev/releases"
-    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.4.0"
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.2.2"
       repository: "https://maven.lavalink.dev/releases"
 
   server:
