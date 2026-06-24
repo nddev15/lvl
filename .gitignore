@@ -1,0 +1,16 @@
+# Không commit file JAR (nặng ~100MB, Dockerfile tự tải)
+Lavalink.jar
+
+# Thư mục plugins – tự động tải khi Lavalink chạy
+plugins/
+
+# Thư mục log
+logs/
+*.log
+
+# Windows script (không cần trên server Linux)
+start.bat
+
+# File rác
+*.tmp
+.DS_Store

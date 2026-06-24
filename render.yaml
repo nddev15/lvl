@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: lavalink
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free                    # Đổi thành "starter" nếu cần uptime liên tục
+
+    # Render tự inject $PORT, Lavalink đọc qua SERVER_PORT
+    envVars:
+      - key: SERVER_PORT
+        sync: false               # Render sẽ tự set PORT, ta map sang SERVER_PORT
+
+      - key: LAVALINK_PASSWORD
+        sync: false               # Set thủ công trong Dashboard → Environment
+
+      - key: SPOTIFY_CLIENT_ID
+        sync: false               # Tuỳ chọn – nếu muốn dùng Spotify
+
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false               # Tuỳ chọn – nếu muốn dùng Spotify
+
+    healthCheckPath: /v4/info     # Render dùng để check service còn sống không
+    autoDeploy: true              # Tự deploy khi push lên GitHub

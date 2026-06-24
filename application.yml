@@ -1,0 +1,108 @@
+server:
+  port: ${PORT:${SERVER_PORT:2333}}  # Render inject $PORT; fallback SERVER_PORT; fallback 2333
+  address: 0.0.0.0
+  http2:
+    enabled: false
+
+plugins:
+  # ── YouTube Source Plugin (thay thế built-in YouTube bị block) ──────────────
+  youtube:
+    enabled: true
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+    clients:
+      - MUSIC           # YouTube Music client – ổn định nhất
+      - ANDROID_TESTSUITE
+      - WEB
+      - TVHTML5EMBEDDED
+
+  # ── LavaSrc – Spotify / SoundCloud / Deezer ──────────────────────────────────
+  lavasrc:
+    providers:
+      - "ytsearch:\"%ISRC%\""   # tìm trên YouTube bằng ISRC code
+      - "ytsearch:%QUERY%"
+      - "scsearch:%QUERY%"      # SoundCloud fallback
+    sources:
+      spotify: true             # ✅ bật – dùng ISRC để map sang YouTube
+      appleMusic: false
+      deezer: true              # ✅ bật – map qua YouTube
+      yandexMusic: false
+    spotify:
+      clientId: "${SPOTIFY_CLIENT_ID:85aab1d51a174aad9eed6d7989f530e6}"
+      clientSecret: "${SPOTIFY_CLIENT_SECRET:b2ad05aa725e434c88776a1be8eab6c2}"
+      countryCode: "VN"
+      playlistLoadLimit: 6
+      albumLoadLimit: 6
+    appleMusic:
+      mediaAPIToken: ""
+    deezer:
+      masterDecryptionKey: ""   # để trống vẫn hoạt động
+
+lavalink:
+  # ── Plugins tự động tải khi khởi động ────────────────────────────────────────
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.13.1"
+      repository: "https://maven.lavalink.dev/releases"
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.4.0"
+      repository: "https://maven.lavalink.dev/releases"
+
+  server:
+    password: "${LAVALINK_PASSWORD:youshallnotpass}"  # ← set ở Render Environment
+    sources:
+      youtube: false              # tắt built-in, dùng youtube-plugin thay thế
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      nico: true
+      http: true
+      local: false
+
+    filters:
+      volume: true
+      equalizer: true
+      karaoke: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      distortion: true
+      rotation: true
+      channelMix: true
+      lowPass: true
+
+    # ── Hiệu năng (tối ưu cho Render free 512MB RAM) ─────────────────────────
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: LOW
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistLoadLimit: 100
+    playerUpdateInterval: 5
+    youtubeSearchEnabled: true
+    soundcloudSearchEnabled: true
+    gc-warnings: true
+
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+
+sentry:
+  dsn: ""
+  environment: ""
+
+logging:
+  file:
+    path: ./logs/
+  level:
+    root: INFO
+    lavalink: INFO
+  request:
+    enabled: true
+    includeClientInfo: true
+    includeHeaders: false
+    includeQueryString: true
+    includePayload: true
+    maxPayloadLength: 10000
