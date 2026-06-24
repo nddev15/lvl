@@ -26,7 +26,7 @@ plugins:
     sources:
       spotify: true             # ✅ bật – dùng ISRC để map sang YouTube
       appleMusic: false
-      deezer: true              # ✅ bật – map qua YouTube
+      deezer: false             # ❌ tắt – cần masterDecryptionKey mới bật được
       yandexMusic: false
     spotify:
       clientId: "${SPOTIFY_CLIENT_ID:85aab1d51a174aad9eed6d7989f530e6}"
@@ -37,7 +37,7 @@ plugins:
     appleMusic:
       mediaAPIToken: ""
     deezer:
-      masterDecryptionKey: ""   # để trống vẫn hoạt động
+      masterDecryptionKey: ""   # tắt deezer: false nên key không cần thiết
 
 lavalink:
   # ── Plugins tự động tải khi khởi động ────────────────────────────────────────
