@@ -5,17 +5,21 @@ server:
     enabled: false
 
 plugins:
-  # ── YouTube Source Plugin (thay thế built-in YouTube bị block) ──────────────
+  # ── YouTube Source Plugin ──────────────────────────────
   youtube:
     enabled: true
     allowSearch: true
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     clients:
-      - MUSIC           # YouTube Music client – ổn định nhất
-      - ANDROID_TESTSUITE
-      - WEB
+      - MUSIC
+      - ANDROID_VR
+      - WEBEMBEDDED
       - TVHTML5EMBEDDED
+      - M_WEB
+      - WEB
+      - TV
+
 
   # ── LavaSrc – Spotify / SoundCloud / Deezer ──────────────────────────────────
   lavasrc:
